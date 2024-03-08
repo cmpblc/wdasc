@@ -29,10 +29,12 @@
 
         /* CSS styles for center alignment */
         .vertical-center {
-          margin: 0;
-          position: absolute;
-          top: 50%;  
-          left: 50%;
+            margin: 0;
+            position: absolute;
+            top: 50%;  
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     
     </style>
@@ -44,19 +46,18 @@
         <div class="vertical-center">
             <!-- Original buttons -->
             <button class="decision-button" onclick="get_started()">Get Started</button>
+        </div>
+    </div>
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
         function get_started() {
-            // alert("You chose Get Started!");
             // Remove original buttons
             document.getElementById('button-container').innerHTML = '';
             // Add new buttons or further logic for Get Started button
             document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
         }
     </script>
-            
-    </div>
 
 </body>
 </html>
