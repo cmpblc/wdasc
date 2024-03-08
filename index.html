@@ -19,6 +19,7 @@
 
         /* CSS styles for center alignment */
         .button-container {
+            background-color: #f0f0f0; /* Background color of the container */
             text-align: center;
             margin-top: 50px; /* Adjust the margin as needed */
         }
@@ -26,12 +27,11 @@
     </style>
 </head>
 <body>
-
+    
     <!-- Decision tree buttons container -->
     <div id="button-container">
         <!-- Original buttons -->
         <button class="decision-button" onclick="get_started()">Get Started</button>
-        // <button class="decision-button" onclick="optionB()">Option B</button>
     </div>
 
     <!-- JavaScript functions for decision outcomes -->
@@ -41,16 +41,8 @@
             // Remove original buttons
             document.getElementById('button-container').innerHTML = '';
             // Add new buttons or further logic for Get Started button
-            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
         }
-
-//        function optionB() {
-            // alert("You chose Option B!");
-            // Remove original buttons
-//            document.getElementById('button-container').innerHTML = '';
-            // Add new buttons or further logic for Option B
-//            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionB1()">Option B1</button><button class="decision-button" onclick="optionB2()">Option B2</button>';
-//        }
 
         // Additional functions for further options
         function optionA1() {
