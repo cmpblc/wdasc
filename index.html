@@ -17,11 +17,23 @@
             cursor: pointer;
         }
 
-        /* CSS styles for center alignment */
+        /* CSS styles for container */
         .button-container {
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
             background-color: #f0f0f0; /* Background color of the container */
             text-align: center;
-            margin-top: 50px; /* Adjust the margin as needed */
+            padding: 50px; /* Adjust the margin as needed */
+        }
+
+        /* CSS styles for center alignment */
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
         }
     
     </style>
@@ -29,9 +41,10 @@
 <body>
     
     <!-- Decision tree buttons container -->
-    <div id="button-container">
-        <!-- Original buttons -->
-        <button class="decision-button" onclick="get_started()">Get Started</button>
+    <div class="button-container">
+        <div class="vertical-center">
+            <!-- Original buttons -->
+            <button class="decision-button" onclick="get_started()">Get Started</button>
     </div>
 
     <!-- JavaScript functions for decision outcomes -->
