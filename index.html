@@ -31,9 +31,8 @@
         .vertical-center {
           margin: 0;
           position: absolute;
-          top: 50%;
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          top: 50%;  
+          left: 50%;
         }
     
     </style>
@@ -45,7 +44,6 @@
         <div class="vertical-center">
             <!-- Original buttons -->
             <button class="decision-button" onclick="get_started()">Get Started</button>
-    </div>
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
@@ -56,28 +54,9 @@
             // Add new buttons or further logic for Get Started button
             document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
         }
-
-        // Additional functions for further options
-        function optionA1() {
-            alert("You chose Option A1!");
-            // Add further logic for Option A1
-        }
-
-        function optionA2() {
-            alert("You chose Option A2!");
-            // Add further logic for Option A2
-        }
-
-        function optionB1() {
-            alert("You chose Option B1!");
-            // Add further logic for Option B1
-        }
-
-        function optionB2() {
-            alert("You chose Option B2!");
-            // Add further logic for Option B2
-        }
     </script>
+            
+    </div>
 
 </body>
 </html>
