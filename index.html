@@ -20,34 +20,52 @@
 </head>
 <body>
 
-    <!-- Decision tree buttons -->
-    <div>
+    <!-- Decision tree buttons container -->
+    <div id="button-container">
+        <!-- Original buttons -->
         <button class="decision-button" onclick="optionA()">Option A</button>
         <button class="decision-button" onclick="optionB()">Option B</button>
-        <button class="decision-button" onclick="optionA()">Option C</button>
-        <button class="decision-button" onclick="optionB()">Option D</button>
     </div>
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
         function optionA() {
             // alert("You chose Option A!");
-            // Add further logic or buttons for Option A
-
-                <!-- Decision tree buttons - level 2 -->
-                <div>
-                    <button class="decision-button" onclick="optionA()">Option C</button>
-                    <button class="decision-button" onclick="optionB()">Option D</button>
-                </div>
-            
+            // Remove original buttons
+            document.getElementById('button-container').innerHTML = '';
+            // Add new buttons or further logic for Option A
+            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionA1()">Option A1</button><button class="decision-button" onclick="optionA2()">Option A2</button>';
         }
 
         function optionB() {
-            alert("You chose Option B!");
-            // Add further logic or buttons for Option B
+            // alert("You chose Option B!");
+            // Remove original buttons
+            document.getElementById('button-container').innerHTML = '';
+            // Add new buttons or further logic for Option B
+            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionB1()">Option B1</button><button class="decision-button" onclick="optionB2()">Option B2</button>';
+        }
+
+        // Additional functions for further options
+        function optionA1() {
+            alert("You chose Option A1!");
+            // Add further logic for Option A1
+        }
+
+        function optionA2() {
+            alert("You chose Option A2!");
+            // Add further logic for Option A2
+        }
+
+        function optionB1() {
+            alert("You chose Option B1!");
+            // Add further logic for Option B1
+        }
+
+        function optionB2() {
+            alert("You chose Option B2!");
+            // Add further logic for Option B2
         }
     </script>
 
 </body>
 </html>
-
