@@ -16,6 +16,13 @@
             margin: 5px;
             cursor: pointer;
         }
+
+        /* CSS styles for center alignment */
+        .button-container {
+            text-align: center;
+            margin-top: 50px; /* Adjust the margin as needed */
+        }
+    
     </style>
 </head>
 <body>
@@ -23,27 +30,27 @@
     <!-- Decision tree buttons container -->
     <div id="button-container">
         <!-- Original buttons -->
-        <button class="decision-button" onclick="optionA()">Option A</button>
-        <button class="decision-button" onclick="optionB()">Option B</button>
+        <button class="decision-button" onclick="get_started()">Get Started</button>
+        // <button class="decision-button" onclick="optionB()">Option B</button>
     </div>
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
-        function optionA() {
-            // alert("You chose Option A!");
+        function get_started() {
+            // alert("You chose Get Started!");
             // Remove original buttons
             document.getElementById('button-container').innerHTML = '';
-            // Add new buttons or further logic for Option A
-            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionA1()">Option A1</button><button class="decision-button" onclick="optionA2()">Option A2</button>';
+            // Add new buttons or further logic for Get Started button
+            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
         }
 
-        function optionB() {
+//        function optionB() {
             // alert("You chose Option B!");
             // Remove original buttons
-            document.getElementById('button-container').innerHTML = '';
+//            document.getElementById('button-container').innerHTML = '';
             // Add new buttons or further logic for Option B
-            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionB1()">Option B1</button><button class="decision-button" onclick="optionB2()">Option B2</button>';
-        }
+//            document.getElementById('button-container').innerHTML = '<button class="decision-button" onclick="optionB1()">Option B1</button><button class="decision-button" onclick="optionB2()">Option B2</button>';
+//        }
 
         // Additional functions for further options
         function optionA1() {
