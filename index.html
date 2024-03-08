@@ -24,13 +24,22 @@
     <div>
         <button class="decision-button" onclick="optionA()">Option A</button>
         <button class="decision-button" onclick="optionB()">Option B</button>
+        <button class="decision-button" onclick="optionA()">Option C</button>
+        <button class="decision-button" onclick="optionB()">Option D</button>
     </div>
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
         function optionA() {
-            alert("You chose Option A!");
+            // alert("You chose Option A!");
             // Add further logic or buttons for Option A
+
+                <!-- Decision tree buttons - level 2 -->
+                <div>
+                    <button class="decision-button" onclick="optionA()">Option C</button>
+                    <button class="decision-button" onclick="optionB()">Option D</button>
+                </div>
+            
         }
 
         function optionB() {
