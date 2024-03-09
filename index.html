@@ -45,7 +45,7 @@
     <div class="button-container">
         <div class="vertical-center">
             <!-- Original buttons -->
-            <button class="decision-button" onclick="get_started()">Get Started</button>
+            <button class="decision-button" id="getStarted">Get Started</button>
         </div>
     </div>
 
@@ -58,19 +58,20 @@
             buttonContainer.removeChild(originalButton);
 
             // Add new buttons or further logic
-            var newButtonsHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or an adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            var newButtonsHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or an adult?</p><button class="decision-button" id="child">Child</button><button class="decision-button" id="adult">Adult</button>';
             buttonContainer.innerHTML += newButtonsHTML;
+
+            // Attach event listeners to new buttons
+            document.getElementById('child').addEventListener('click', function() {
+                alert("You chose Child!");
+                // Add further logic for Child option
+            });
+
+            document.getElementById('adult').addEventListener('click', function() {
+                alert("You chose Adult!");
+                // Add further logic for Adult option
+            });
         });
-
-        function child() {
-            alert("You chose Child!");
-            // Add further logic for Child option
-        }
-
-        function adult() {
-            alert("You chose Adult!");
-            // Add further logic for Adult option
-        }
     </script>
 
 </body>
