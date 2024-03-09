@@ -44,6 +44,7 @@
     <!-- Decision tree buttons container -->
     <div class="button-container">
         <div class="vertical-center">
+            <h2>Lets get started</h2>
             <!-- Original buttons -->
             <button class="decision-button" onclick="get_started()">Get Started</button>
         </div>
@@ -56,7 +57,7 @@
             // Remove original button
             document.getElementById('button-container').innerHTML = '';
             // Add new buttons or further logic for Get Started button
-            // document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
         }
     </script>
 
