@@ -44,7 +44,6 @@
     <!-- Decision tree buttons container -->
     <div class="button-container">
         <div class="vertical-center">
-            <h2>Lets get started</h2>
             <!-- Original buttons -->
             <button class="decision-button" onclick="get_started()">Get Started</button>
         </div>
@@ -52,12 +51,25 @@
 
     <!-- JavaScript functions for decision outcomes -->
     <script>
-        function get_started() {
-            alert("You chose Get Startd");
+        document.getElementById('getStarted').addEventListener('click', function() {
             // Remove original button
-            document.getElementById('button-container').innerHTML = '';
-            // Add new buttons or further logic for Get Started button
-            document.getElementById('button-container').innerHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or and adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            var buttonContainer = document.querySelector('.button-container');
+            var originalButton = document.getElementById('getStarted');
+            buttonContainer.removeChild(originalButton);
+
+            // Add new buttons or further logic
+            var newButtonsHTML = '<h2>Child-Adult</h2><p>Is the aspiring swimmer a child or an adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            buttonContainer.innerHTML += newButtonsHTML;
+        });
+
+        function child() {
+            alert("You chose Child!");
+            // Add further logic for Child option
+        }
+
+        function adult() {
+            alert("You chose Adult!");
+            // Add further logic for Adult option
         }
     </script>
 
