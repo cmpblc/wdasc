@@ -45,7 +45,7 @@
     <div class="content-container" id="content-container">
         <div class="vertical-center">
             <!-- Original content -->
-            <p>Version 1</p>
+            <p>Version 2</p>
             <button class="decision-button" onclick="getStarted()">Get Started</button>
         </div>
     </div>
@@ -57,17 +57,39 @@
             alert("You chose to get started");
             // Add logic for getStarted button
             document.getElementById('content-container').innerHTML = '';
-            document.getElementById('content-container').innerHTML = '<p>Is the aspiring swimmer a child or an adult?</p><button class="decision-button" onclick="child()">Child</button><button class="decision-button" onclick="adult()">Adult</button>';
+            document.getElementById('content-container').innerHTML =
+                '<div class="vertical-center">' +
+                    '<p>Is the aspiring swimmer a child or an adult?</p>' +
+                    '<button class="decision-button" onclick="child()">Child</button>' +
+                    '<button class="decision-button" onclick="adult()">Adult</button>' +
+                '</div>';
         }
 
         function child() {
             alert("You chose Child");
             // Add logic for getStarted button
+            document.getElementById('content-container').innerHTML = '';
+            document.getElementById('content-container').innerHTML =
+                '<div class="vertical-center">' +
+                    '<p>What is your child\'s current swimming level?</p>' +
+                    '<button class="decision-button" onclick="beginner()">Beginner</button>' +
+                    '<button class="decision-button" onclick="knowsTheBasics()">Knows the basics</button>' +
+                    '<button class="decision-button" onclick="clubSwimmer()">Club swimmer</button>' +
+                '</div>';
         }
 
         function adult() {
             alert("You chose Adult");
             // Add logic for getStarted button
+            document.getElementById('content-container').innerHTML = '';
+            document.getElementById('content-container').innerHTML =
+                '<div class="vertical-center">' +
+                    '<p>What type of swimming are you looking to participate in?</p>' +
+                    '<button class="decision-button" onclick="adultLessons()">Adult lesson programme</button>' +
+                    '<button class="decision-button" onclick="clubSwimming()">Club swimming</button>' +
+                    '<button class="decision-button" onclick="triathlon()">Triathlon</button>' +
+                    '<button class="decision-button" onclick="waterPolo()">Water polo</button>' +
+                '</div>';  
         }
         
     </script>
