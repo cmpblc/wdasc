@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decision Tree</title>
+
+    <!-- Image at the top of the page -->
+    <img src="https://cmpblc.github.io/wdasc/background_images.jpg" alt="Description of the image" style="width: 100%; height: auto;">
+
     <style>
         /* CSS styles for buttons */
         .decision-button {
@@ -47,7 +51,7 @@
     <div class="content-container" id="content-container">
         <div class="vertical-center">
             <!-- Original content -->
-            <p>Version 4</p>
+            <p>Version 5</p>
             <button class="decision-button" onclick="getStarted()">Get Started</button>
         </div>
     </div>
@@ -72,7 +76,7 @@
             document.getElementById('content-container').innerHTML =
                 '<div class="vertical-center">' +
                     '<p>What is your child\'s current swimming level?</p>' +
-                    '<button class="decision-button" onclick="beginner()">Beginner</button>' +
+                    '<button class="decision-button" onclick="nonSwimmer()">Non swimmer</button>' +
                     '<button class="decision-button" onclick="knowsTheBasics()">Knows the basics</button>' +
                     '<button class="decision-button" onclick="clubSwimmer()">Club swimmer</button>' +
                 '</div>';
